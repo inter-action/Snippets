@@ -13,7 +13,7 @@ build go source file
 
 go development
 
-    docker run --rm -it -v "$PWD":/usr/src/myapp -w /usr/src/myapp
+    docker run --rm -it -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:1.3
 
 
 you maybe need a docker file to install go dependencies first, like this,
