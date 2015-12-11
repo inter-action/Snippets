@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log>
+<logentry
+   revision="10119">
+<author>miujing</author>
+<date>2014-09-28T09:04:42.930998Z</date>
+<paths>
+<path
+   kind="file"
+   action="A">/cpcai6.0/WebRoot/WEB-INF/lottery-util.tld</path>
+<path
+   kind="file"
+   action="M">/cpcai6.0/WebRoot/WEB-INF/pages/user/caiAccount/myjfcExchangeLotteryLogParti.jsp</path>
+<path
+   kind="file"
+   action="M">/cpcai6.0/WebRoot/WEB-INF/pages/user/caiAccount/myjfcPursueLotteryLog.jsp</path>
+<path
+   kind="file"
+   action="M">/cpcai6.0/WebRoot/WEB-INF/pages/user/caiAccount/orderDetails.jsp</path>
+<path
+   kind="file"
+   action="M">/cpcai6.0/WebRoot/WEB-INF/pages/user/caiAccount/showAccountMoneyH4.jsp</path>
+<path
+   kind="file"
+   action="M">/cpcai6.0/WebRoot/WEB-INF/pages/user/caiAccount/showExchangeLotteryList.jsp</path>
+<path
+   kind="file"
+   action="M">/cpcai6.0/WebRoot/WEB-INF/pages/user/caiAccount/showZJLotteryList.jsp</path>
+<path
+   kind="file"
+   action="M">/cpcai6.0/WebRoot/WEB-INF/pages/user/caiAccount/ssqzj.jsp</path>
+<path
+   kind="file"
+   action="M">/cpcai6.0/WebRoot/WEB-INF/pages/user/userIndex.jsp</path>
+<path
+   kind="file"
+   action="M">/cpcai6.0/WebRoot/WEB-INF/web.xml</path>
+<path
+   kind="file"
+   action="M">/cpcai6.0/WebRoot/common/taglibs.jsp</path>
+<path
+   kind="file"
+   action="M">/cpcai6.0/WebRoot/js/lottery/load.addon.js</path>
+<path
+   kind="dir"
+   action="A">/cpcai6.0/src/com/jfk/caipiao/web/taglib/lottery</path>
+<path
+   kind="file"
+   action="A">/cpcai6.0/src/com/jfk/caipiao/web/taglib/lottery/LotteryPlaytypeName.java</path>
+<path
+   kind="file"
+   action="A">/cpcai6.0/src/com/jfk/caipiao/web/taglib/lottery/LotteryUtilFunctions.java</path>
+</paths>
+<msg>ADD 快乐扑克 | 扑克3</msg>
+</logentry>
+</log>

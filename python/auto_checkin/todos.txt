@@ -1,0 +1,27 @@
+
+DONE:
+    two logging cant work together: 
+        Merged to one module
+    make error explict: 
+        logging.exception() method does exactly this
+    check is job muti-threading? : 
+        I think it is. cause all the jobs fill in the lines, that will run at exact time you configured at head.
+
+    make logging tool an independent module
+        make logging determinate which module it called 
+
+    check in days should be configurable and skip saturday & sunday
+    add a checkout for myself
+    test checkout
+    add random computation to checkin.
+    scheduler module configuration move to configloader module
+
+
+PENDING:
+    move autocheckin host info into configure file
+    replace checkin_end_min with range sec
+
+    xieyanchun/xyc123
+    
+
+    

@@ -1,0 +1,15 @@
+/cpcai6.0/WebRoot/WEB-INF/lottery-util.tld
+/cpcai6.0/WebRoot/WEB-INF/pages/user/caiAccount/myjfcExchangeLotteryLogParti.jsp
+/cpcai6.0/WebRoot/WEB-INF/pages/user/caiAccount/myjfcPursueLotteryLog.jsp
+/cpcai6.0/WebRoot/WEB-INF/pages/user/caiAccount/orderDetails.jsp
+/cpcai6.0/WebRoot/WEB-INF/pages/user/caiAccount/showAccountMoneyH4.jsp
+/cpcai6.0/WebRoot/WEB-INF/pages/user/caiAccount/showExchangeLotteryList.jsp
+/cpcai6.0/WebRoot/WEB-INF/pages/user/caiAccount/showZJLotteryList.jsp
+/cpcai6.0/WebRoot/WEB-INF/pages/user/caiAccount/ssqzj.jsp
+/cpcai6.0/WebRoot/WEB-INF/pages/user/userIndex.jsp
+/cpcai6.0/WebRoot/WEB-INF/web.xml
+/cpcai6.0/WebRoot/common/taglibs.jsp
+/cpcai6.0/WebRoot/js/lottery/load.addon.js
+/cpcai6.0/src/com/jfk/caipiao/web/taglib/lottery
+/cpcai6.0/src/com/jfk/caipiao/web/taglib/lottery/LotteryPlaytypeName.java
+/cpcai6.0/src/com/jfk/caipiao/web/taglib/lottery/LotteryUtilFunctions.java
