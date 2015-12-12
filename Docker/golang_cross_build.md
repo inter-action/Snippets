@@ -3,6 +3,7 @@
 
 details goes here [golang docker hub](https://hub.docker.com/_/golang/), include cross build for windows,
 
+
 make sure your PWD is under your user path, like `docker run -v /Users/<path>:/<container path>`
 
     docker pull golang:1.3-onbuild
@@ -17,7 +18,6 @@ go development
 
 
 you maybe need a docker file to install go dependencies first, like this,
-
 
 
     FROM golang:1.3.1-onbuild
@@ -37,3 +37,19 @@ you maybe need a docker file to install go dependencies first, like this,
     2.run just builded image into a container named `api-running` in interactive mode, `--rm` remove previous container if existed
 
 
+## golang :on-build tag
+    
+on-build image, will copy current directory in to /go/src/app, then run `RUN go get -d -v` then  `RUN go install -v`
+
+    # golang:1.4-onbuild dockerfile
+    FROM golang:1.4
+
+    RUN mkdir -p /go/src/app
+    WORKDIR /go/src/app
+
+    # this will ideally be built by the ONBUILD below ;)
+    CMD ["go-wrapper", "run"]
+
+    ONBUILD COPY . /go/src/app
+    ONBUILD RUN go-wrapper download
+    ONBUILD RUN go-wrapper install
