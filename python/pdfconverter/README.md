@@ -32,3 +32,8 @@ install dependencies:
 
     python main.py
 
+
+## todo:
+
+    add packaging
+        http://www.pyinstaller.org/
