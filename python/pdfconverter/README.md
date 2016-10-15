@@ -30,7 +30,7 @@ install dependencies:
 
 运行, 根据提示添加对应的信息, 目标路径的url是必填的:
 
-    python main.py
+    make run
 
 
 ## todo:

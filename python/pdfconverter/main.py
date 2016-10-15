@@ -11,18 +11,25 @@ import config_loader
 import argument_parser
 
 def get_title(target_url):
-    resp = urllib.request.urlopen(target_url)
-    lines = resp.readlines()
-    for line in lines:
-        sline = line.decode().strip()
-        if sline == "": continue
-        if not isinstance(sline, str):
-            raise Exception('not str')
-        (error, title) = parse_title(sline)
-        if error == None and title != None:
-            return title
+    print("try to get target_ur's title: ", target_url)
+    try:
+        resp = urllib.request.urlopen(target_url)
+        lines = resp.readlines()
+        for line in lines:
+            sline = line.decode().strip()
+            if sline == "": continue
+            if not isinstance(sline, str):
+                raise Exception('not str')
+            (error, title) = parse_title(sline)
+            if error == None and title != None:
+                return title
+        return ""
+    except urllib.error.HTTPError as e:
+        print("skip parsing title")
+        print("try to get target_url's title failed, reason: ", e)
+        return ""
 
-    return ""
+    
 
 def parse_title(line):
     # line = "<title>Machine Learning :: Text feature extraction (tf-idf) &#8211; Part I | Terra Incognita</title>"
@@ -71,14 +78,15 @@ def kick_start(args):
             client.setMaxPages(args["max_page"])
         
         print("I'am on the mission now, please wait...")
-        target_url = args["target_url"]
-        # convert a web page and store the generated PDF into a pdf variable
-        pdf = client.convertURI(target_url)
 
+        target_url = args["target_url"]
         # todo: make this concurrent
         title = get_title(target_url)
         if title is "":
             title = "file"
+
+        # convert a web page and store the generated PDF into a pdf variable
+        pdf = client.convertURI(target_url)
         
         output_path = configs["output_path"]
         if not os.path.exists(output_path):
