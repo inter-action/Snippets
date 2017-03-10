@@ -60,13 +60,19 @@ def parse_args():
     if target_url == "":
         raise Exception("url is required")
     
+    parse_title = input("* parse title?(y/[n])!: \n")
+    if parse_title.lower() == "n":
+        parse_title = False
+    else:
+        parse_title = True
+
     max_page = input("please enter max page to generate, optional: \n")
     if max_page == "":
         max_page = None
     else:
         max_page = int(max_page)
 
-    return {"target_url": target_url, "max_page": max_page}
+    return {"target_url": target_url, "max_page": max_page, "parse_title": parse_title}
 
 def kick_start(args):
     try:
@@ -81,7 +87,11 @@ def kick_start(args):
 
         target_url = args["target_url"]
         # todo: make this concurrent
-        title = get_title(target_url)
+        if args["parse_title"] is True:
+            title = get_title(target_url)
+        else:
+            title = ""
+
         if title is "":
             title = "file"
 

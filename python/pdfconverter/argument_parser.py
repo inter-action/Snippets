@@ -1,5 +1,3 @@
-import re
-
 def parse_args(args):
     """
     parse sys.argv
@@ -16,6 +14,5 @@ def parse_args(args):
         key = item.split(" ", 1)[0]
         value = item.split(" ", 1)[1]
         result[key] = value
-    
     return result
             
